@@ -373,7 +373,7 @@ impl Lookups {
                     String::new()
                 };
 
-                let num_lig = if variation == NasinNanpaVariation::Main {
+                let num_lig = if variation == NasinNanpaVariation::Main && full_name.contains("VAR0") {
                     format!(
                         "Ligature2: \"'liga' VAR PLUS SPACE\" {glyph} {sel} space\nLigature2: \"'liga' VAR\" {glyph} {sel}\n",
                         sel = match sel {
@@ -392,7 +392,7 @@ impl Lookups {
                     String::new()
                 };
 
-                let rerand = {
+                let rerand = if full_name.contains("VAR0") {
                     let sel_word = match sel {
                         "VAR01" | "arrowW" => "one",
                         "VAR02" | "arrowN" => "two",
@@ -420,6 +420,8 @@ impl Lookups {
                     } else {
                         String::new()
                     }
+                } else {
+                    String::new()
                 };
 
                 let if_main = if variation == NasinNanpaVariation::Main {

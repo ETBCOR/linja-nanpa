@@ -184,6 +184,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                     vec![],
                 ),
             ),
+            GlyphEnc::new_from_parts(EncPos::Pos(0xE01EF), "VAR256", 0, Rep::default()),
         ],
         LookupsMode::WordLigManual(vec![
             String::new(),
@@ -213,6 +214,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             "comma comma".to_string(),
             "comma comma comma".to_string(),
             "comma comma comma comma".to_string(),
+            String::new(),
         ]),
         Cc::Participant,
         "",
