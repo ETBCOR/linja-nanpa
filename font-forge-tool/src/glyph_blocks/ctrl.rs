@@ -673,7 +673,7 @@ r#"
  50 561 113 679 170 755 c 0
  180 768 195 775 210 775 c 0"#,
 ),
-GlyphDescriptor::new("wileTok_VAR01",
+GlyphDescriptor::new("wileTok_VAR02",
 r#"
 500 99 m 1
  457 48 388 0 300 0 c 0
