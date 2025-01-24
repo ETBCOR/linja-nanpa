@@ -1,6 +1,5 @@
 use crate::{GlyphDescriptor, Anchor, AnchorType};
 
-
 //MARK: INNER
 pub const TOK_INNER: [GlyphDescriptor; 136] = [
 GlyphDescriptor::new_with_anchor("a", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
