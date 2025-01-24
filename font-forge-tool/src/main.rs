@@ -1,5 +1,5 @@
 use ffir::*;
-use glyph_blocks::*;
+use glyph_blocks::{*, ctrl::*, base::*, lower::*, outer::*, inner::*};
 use itertools::Itertools;
 use std::{collections::HashSet, fs::File, io::Write};
 
@@ -269,7 +269,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let latn_block = if variation == NasinNanpaVariation::Main {
         GlyphBlock::new_from_constants(
             &mut ff_pos,
-            glyph_blocks::LATN.as_slice(),
+            LATN.as_slice(),
             LookupsMode::None,
             Cc::Half,
             "",
