@@ -4240,7 +4240,7 @@ r#"
 ),
 ];
 
-pub const TOK_EXT: [GlyphDescriptor; 9] = [
+pub const TOK_EXT: [GlyphDescriptor; 97] = [
 GlyphDescriptor::new("pake",
 r#"
 150 800 m 2
@@ -4479,40 +4479,53 @@ r#"
  150 750 l 2
  150 778 172 800 200 800 c 2"#
 ),
-GlyphDescriptor::new("wa",
-r#"
-402 -50 m 0
- 284 -50 231 56 231 172 c 0
- 231 267 268 336 301 380 c 0
- 311 393 326 400 341 400 c 0
- 351 400 362 397 371 390 c 0
- 384 380 391 365 391 350 c 0
- 391 340 388 329 381 320 c 0
- 357 288 331 239 331 172 c 0
- 331 132 339 99 352 78 c 0
- 363 60 377 50 402 50 c 0
- 423 50 448 74 450 95 c 0
- 452 121 472 140 500 140 c 0
- 528 140 548 121 550 95 c 0
- 552 74 577 50 598 50 c 0
- 623 50 637 60 648 78 c 0
- 661 99 669 132 669 172 c 0
- 669 239 643 288 619 320 c 0
- 612 329 609 340 609 350 c 0
- 609 365 616 380 629 390 c 0
- 638 397 649 400 659 400 c 0
- 674 400 689 393 699 380 c 0
- 732 336 769 267 769 172 c 0
- 769 56 716 -50 598 -50 c 0
- 562 -50 526 -34 500 -11 c 1
- 474 -34 438 -50 402 -50 c 0
-500 850 m 0
- 528 850 550 828 550 800 c 2
- 550 450 l 2
- 550 422 528 400 500 400 c 0
- 472 400 450 422 450 450 c 2
- 450 800 l 2
- 450 828 472 850 500 850 c 0"#
+GlyphDescriptor::new("isipin",
+r#""#
+),
+GlyphDescriptor::new("jami",
+r#""#
+),
+GlyphDescriptor::new("jonke",
+r#""#
+),
+GlyphDescriptor::new("kamalawala",
+r#""#
+),
+GlyphDescriptor::new("kapesi",
+r#""#
+),
+GlyphDescriptor::new("konwe",
+r#""#
+),
+GlyphDescriptor::new("kulijo",
+r#""#
+),
+GlyphDescriptor::new("melome",
+r#""#
+),
+GlyphDescriptor::new("mijomi",
+r#""#
+),
+GlyphDescriptor::new("misa",
+r#""#
+),
+GlyphDescriptor::new("mulapisu",
+r#""#
+),
+GlyphDescriptor::new("nimisin",
+r#""#
+),
+GlyphDescriptor::new("nja",
+r#""#
+),
+GlyphDescriptor::new("ojuta",
+r#""#
+),
+GlyphDescriptor::new("oke",
+r#""#
+),
+GlyphDescriptor::new("omekapo",
+r#""#
 ),
 GlyphDescriptor::new("owe",
 r#"
@@ -4560,6 +4573,257 @@ r#"
  445 160 400 205 400 260 c 0
  400 315 445 360 500 360 c 0
  555 360 600 315 600 260 c 0"#
+),
+GlyphDescriptor::new("pakola",
+r#""#
+),
+GlyphDescriptor::new("penpo",
+r#""#
+),
+GlyphDescriptor::new("pika",
+r#""#
+),
+GlyphDescriptor::new("po",
+r#""#
+),
+GlyphDescriptor::new("puwa",
+r#""#
+),
+GlyphDescriptor::new("san",
+r#""#
+),
+GlyphDescriptor::new("soto",
+r#""#
+),
+GlyphDescriptor::new("teje",
+r#""#
+),
+GlyphDescriptor::new("sutopatikuna",
+r#""#
+),
+GlyphDescriptor::new("taki",
+r#""#
+),
+GlyphDescriptor::new("unu",
+r#""#
+),
+GlyphDescriptor::new("usawi",
+r#""#
+),
+GlyphDescriptor::new("wa",
+r#"
+402 -50 m 0
+ 284 -50 231 56 231 172 c 0
+ 231 267 268 336 301 380 c 0
+ 311 393 326 400 341 400 c 0
+ 351 400 362 397 371 390 c 0
+ 384 380 391 365 391 350 c 0
+ 391 340 388 329 381 320 c 0
+ 357 288 331 239 331 172 c 0
+ 331 132 339 99 352 78 c 0
+ 363 60 377 50 402 50 c 0
+ 423 50 448 74 450 95 c 0
+ 452 121 472 140 500 140 c 0
+ 528 140 548 121 550 95 c 0
+ 552 74 577 50 598 50 c 0
+ 623 50 637 60 648 78 c 0
+ 661 99 669 132 669 172 c 0
+ 669 239 643 288 619 320 c 0
+ 612 329 609 340 609 350 c 0
+ 609 365 616 380 629 390 c 0
+ 638 397 649 400 659 400 c 0
+ 674 400 689 393 699 380 c 0
+ 732 336 769 267 769 172 c 0
+ 769 56 716 -50 598 -50 c 0
+ 562 -50 526 -34 500 -11 c 1
+ 474 -34 438 -50 402 -50 c 0
+500 850 m 0
+ 528 850 550 828 550 800 c 2
+ 550 450 l 2
+ 550 422 528 400 500 400 c 0
+ 472 400 450 422 450 450 c 2
+ 450 800 l 2
+ 450 828 472 850 500 850 c 0"#
+),
+GlyphDescriptor::new("wasoweli",
+r#""#
+),
+GlyphDescriptor::new("wekama",
+r#""#
+),
+GlyphDescriptor::new("wuwojiti",
+r#""#
+),
+GlyphDescriptor::new("yupekosi",
+r#""#
+),
+GlyphDescriptor::new("extF19C9",
+r#""#
+),
+GlyphDescriptor::new("extF19CA",
+r#""#
+),
+GlyphDescriptor::new("extF19CB",
+r#""#
+),
+GlyphDescriptor::new("extF19CC",
+r#""#
+),
+GlyphDescriptor::new("extF19CD",
+r#""#
+),
+GlyphDescriptor::new("extF19CE",
+r#""#
+),
+GlyphDescriptor::new("extF19CF",
+r#""#
+),
+GlyphDescriptor::new("extF19D0",
+r#""#
+),
+GlyphDescriptor::new("extF19D1",
+r#""#
+),
+GlyphDescriptor::new("extF19D2",
+r#""#
+),
+GlyphDescriptor::new("extF19D3",
+r#""#
+),
+GlyphDescriptor::new("extF19D4",
+r#""#
+),
+GlyphDescriptor::new("extF19D5",
+r#""#
+),
+GlyphDescriptor::new("extF19D6",
+r#""#
+),
+GlyphDescriptor::new("extF19D7",
+r#""#
+),
+GlyphDescriptor::new("extF19D8",
+r#""#
+),
+GlyphDescriptor::new("extF19D9",
+r#""#
+),
+GlyphDescriptor::new("extF19DA",
+r#""#
+),
+GlyphDescriptor::new("extF19DB",
+r#""#
+),
+GlyphDescriptor::new("extF19DC",
+r#""#
+),
+GlyphDescriptor::new("extF19DD",
+r#""#
+),
+GlyphDescriptor::new("extF19DE",
+r#""#
+),
+GlyphDescriptor::new("extF19DF",
+r#""#
+),
+GlyphDescriptor::new("extF19E0",
+r#""#
+),
+GlyphDescriptor::new("extF19E1",
+r#""#
+),
+GlyphDescriptor::new("extF19E2",
+r#""#
+),
+GlyphDescriptor::new("extF19E3",
+r#""#
+),
+GlyphDescriptor::new("extF19E4",
+r#""#
+),
+GlyphDescriptor::new("extF19E5",
+r#""#
+),
+GlyphDescriptor::new("extF19E6",
+r#""#
+),
+GlyphDescriptor::new("extF19E7",
+r#""#
+),
+GlyphDescriptor::new("extF19E8",
+r#""#
+),
+GlyphDescriptor::new("extF19E9",
+r#""#
+),
+GlyphDescriptor::new("extF19EA",
+r#""#
+),
+GlyphDescriptor::new("extF19EB",
+r#""#
+),
+GlyphDescriptor::new("extF19EC",
+r#""#
+),
+GlyphDescriptor::new("extF19ED",
+r#""#
+),
+GlyphDescriptor::new("extF19EE",
+r#""#
+),
+GlyphDescriptor::new("extF19EF",
+r#""#
+),
+GlyphDescriptor::new("extF19F0",
+r#""#
+),
+GlyphDescriptor::new("extF19F1",
+r#""#
+),
+GlyphDescriptor::new("extF19F2",
+r#""#
+),
+GlyphDescriptor::new("extF19F3",
+r#""#
+),
+GlyphDescriptor::new("extF19F4",
+r#""#
+),
+GlyphDescriptor::new("extF19F5",
+r#""#
+),
+GlyphDescriptor::new("extF19F6",
+r#""#
+),
+GlyphDescriptor::new("extF19F7",
+r#""#
+),
+GlyphDescriptor::new("extF19F8",
+r#""#
+),
+GlyphDescriptor::new("extF19F9",
+r#""#
+),
+GlyphDescriptor::new("extF19FA",
+r#""#
+),
+GlyphDescriptor::new("extF19FB",
+r#""#
+),
+GlyphDescriptor::new("extF19FC",
+r#""#
+),
+GlyphDescriptor::new("extF19FD",
+r#""#
+),
+GlyphDescriptor::new("extF19FE",
+r#""#
+),
+GlyphDescriptor::new("extF19FF",
+r#""#
+),
+GlyphDescriptor::new("eliki",
+r#""#
 ),
 ];
 
