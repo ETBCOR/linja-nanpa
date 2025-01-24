@@ -360,7 +360,7 @@ impl Lookups {
                 } else if full_name.eq("aTok_VAR02") {
                     "Ligature2: \"'liga' VAR\" aTok aTok aTok\n"
                 } else if full_name.eq("aTok_VAR03") {
-                    "Ligature2: \"'liga' VAR\" semeTok aTok\n"
+                    "Ligature2: \"'liga' VAR\" semeTok ZWJ aTok\nLigature2: \"'liga' VAR\" aTok ZWJ semeTok\n"
                 } else if full_name.eq("aTok_VAR04") && variation == NasinNanpaVariation::Main {
                     "Ligature2: \"'liga' VAR PLUS SPACE\" exclam question space\nLigature2: \"'liga' VAR PLUS SPACE\" question exclam space\nLigature2: \"'liga' VAR\" exclam question\nLigature2: \"'liga' VAR\" question exclam\n"
                 } else {
