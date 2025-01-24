@@ -76,6 +76,7 @@ This table describes both the ligatures in nasin nanpa and the AutoHotKey script
 | (none) | `itan` | jan Itan's personal glyph |
 | (none) | `lepeka` | jan Lepeka's personal glyph |
 | (none) | `lipamanka` | lipamanka's personal glyph |
+| (none) | `Linku` | the Linku name glyph |
 
 ## AHK Scripts
 See [ahk-script/README.md](https://github.com/ETBCOR/nasin-nanpa/tree/main/ahk-script#readme).
