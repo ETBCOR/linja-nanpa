@@ -2171,7 +2171,7 @@ r#"
  886 347 876 360 868 368 c 0
  848 388 810 429 810 485 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 310)),
+GlyphDescriptor::new_with_anchor("akesiTok_VAR02", Anchor::new_scale(AnchorType::Base, (500, 310)),
 r#"
 675 740 m 0
  634 740 600 774 600 815 c 0
@@ -2226,7 +2226,7 @@ r#"
  250 856 284 890 325 890 c 0
  366 890 400 856 400 815 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 540)),
+GlyphDescriptor::new_with_anchor("meliTok_VAR02", Anchor::new_scale(AnchorType::Base, (500, 540)),
 r#"
 500 790 m 0
  362 790 250 678 250 540 c 0
@@ -2253,7 +2253,7 @@ r#"
  150 733 307 890 500 890 c 0
  693 890 850 733 850 540 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new_scale(AnchorType::Base, (420, 320)),
+GlyphDescriptor::new_with_anchor("mijeTok_VAR02", Anchor::new_scale(AnchorType::Base, (420, 320)),
 r#"
 170 320 m 0
  170 182 282 70 420 70 c 0
@@ -2278,7 +2278,7 @@ r#"
  661 730 639 752 639 780 c 0
  639 808 661 830 689 830 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 250)),
+GlyphDescriptor::new_with_anchor("sewiTok_VAR02", Anchor::new_scale(AnchorType::Base, (500, 250)),
 r#"
 425 725 m 0
  425 766 459 800 500 800 c 0
@@ -2299,7 +2299,7 @@ r#"
  900 150 l 2
  900 122 878 100 850 100 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("utaTok_VAR02", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 112 650 m 1
  121 514 164 393 229 305 c 0
@@ -2316,7 +2316,7 @@ r#"
  359 50 236 128 149 246 c 0
  62 364 10 525 10 700 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 420)),
+GlyphDescriptor::new_with_anchor("wileTok_VAR02", Anchor::new_scale(AnchorType::Base, (500, 420)),
 r#"
 280 10 m 0
  327 10 369 28 400 54 c 0
@@ -2344,7 +2344,7 @@ r#"
  990 51 875 -90 720 -90 c 0
  624 -90 547 -43 500 13 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 400)),
+GlyphDescriptor::new_with_anchor("namakoTok_VAR02", Anchor::new_scale(AnchorType::Base, (500, 400)),
 r#"
 10 400 m 0
  10 428 32 450 60 450 c 2
@@ -2375,7 +2375,7 @@ r#"
  800 350 l 2
  772 350 750 372 750 400 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sokoTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 540)),
+GlyphDescriptor::new_with_anchor("sokoTok_VAR02", Anchor::new_scale(AnchorType::Base, (500, 540)),
 r#"
 500 888 m 0
  707 888 990 788 990 240 c 0

@@ -4865,7 +4865,7 @@ r#"
  -685 434 l 2
  -685 462 -663 484 -635 484 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("akesiTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -691 534 m 0
  -691 562 -669 584 -641 584 c 0
@@ -4925,7 +4925,7 @@ r#"
  -502 474 -503 471 -504 468 c 1
  -498 468 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("kalaTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("kalaTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -515 400 m 0
  -515 381 -500 366 -481 366 c 0
@@ -4955,7 +4955,7 @@ r#"
  -260 356 -272 316 -297 284 c 0
  -329 244 -378 225 -429 225 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("meliTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -588 329 m 2
  -550 329 l 1
@@ -4984,7 +4984,7 @@ r#"
  -448 517 -472 540 -500 540 c 0
  -528 540 -551 517 -551 489 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("mijeTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -720 350 m 0
  -720 433 -653 499 -570 499 c 0
@@ -5007,7 +5007,7 @@ r#"
  -620 323 -597 300 -570 300 c 0
  -543 300 -521 323 -521 350 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("olinTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("olinTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -432 545 m 2
  -421 571 l 2
@@ -5061,7 +5061,7 @@ r#"
  -519 317 -533 328 -543 341 c 0
  -555 357 -560 360 -565 360 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("sewiTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -550 590 m 0
  -550 618 -528 640 -500 640 c 0
@@ -5082,7 +5082,7 @@ r#"
  -620 282 -642 260 -670 260 c 0
  -698 260 -720 282 -720 310 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("tenpoTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("tenpoTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -339 554 m 0
  -339 543 -342 533 -348 525 c 2
@@ -5108,7 +5108,7 @@ r#"
  -500 314 l 1
  -513 296 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("utaTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -500 220 m 0
  -629 220 -730 330 -730 460 c 0
@@ -5121,7 +5121,7 @@ r#"
  -622 410 l 1
  -603 356 -554 320 -500 320 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("wileTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -500 253 m 1
  -522 235 -554 219 -592 219 c 0
@@ -5148,7 +5148,7 @@ r#"
  -630 378 -633 365 -633 360 c 0
  -633 337 -615 319 -592 319 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("namakoTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -601 351 m 2
  -691 351 l 2
@@ -5179,7 +5179,7 @@ r#"
  -281 451 -259 429 -259 401 c 0
  -259 373 -281 351 -309 351 c 2"#,
 ),
-GlyphDescriptor::new_with_anchor("sokoTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("sokoTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -359 461 m 1
  -384 510 -427 540 -500 540 c 0
@@ -5201,7 +5201,7 @@ r#"
  -283 543 -254 487 -240 421 c 0
  -239 418 -239 414 -239 411 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("lanpanTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("lanpanTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -557 297 m 0
  -557 288 -559 280 -563 273 c 2
@@ -5248,7 +5248,7 @@ r#"
  -300 449 -323 426 -350 426 c 0
  -355 426 -360 426 -366 428 c 1"#,
 ),
-GlyphDescriptor::new_with_anchor("misikekeTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("misikekeTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -546 352 m 1
  -546 306 l 2
@@ -5270,7 +5270,7 @@ r#"
  -646 497 l 2
  -646 577 -580 643 -500 643 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("linluwiTok_VAR01", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
+GlyphDescriptor::new_with_anchor("linluwiTok_VAR02", Anchor::new_scale(AnchorType::Mark, (-500, 400)),
 r#"
 -476 451 m 0
  -476 462 -467 471 -456 471 c 0

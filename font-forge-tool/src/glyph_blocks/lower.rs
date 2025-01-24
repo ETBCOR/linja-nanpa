@@ -5357,7 +5357,7 @@ r#"
 // GlyphDescriptor::new("aTok_VAR02", ""),
 // GlyphDescriptor::new("aTok_VAR03", ""),
 // GlyphDescriptor::new("aTok_VAR04", ""),
-GlyphDescriptor::new_with_anchor("akesiTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("akesiTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 504 335 m 2
  504 311 l 1
@@ -5425,7 +5425,7 @@ r#"
  770 288 748 266 720 266 c 0
  692 266 670 288 670 316 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("kalaTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("kalaTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 291 225 m 1
  374 311 479 390 614 390 c 0
@@ -5462,7 +5462,7 @@ r#"
  500 180 527 207 560 207 c 0
  593 207 620 180 620 147 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("meliTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("meliTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 349 239 m 0
  349 323 416 390 500 390 c 0
@@ -5491,7 +5491,7 @@ r#"
  529 187 552 211 552 239 c 0
  552 267 528 290 500 290 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("mijeTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("mijeTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 659 389 m 2
  686 389 709 366 709 339 c 2
@@ -5516,9 +5516,9 @@ r#"
  329 44 364 9 408 9 c 0
  452 9 487 44 487 88 c 0"#,
 ),
-// GlyphDescriptor::new("muTok_VAR01, ""),
-// GlyphDescriptor::new("muteTok_VAR01, ""),
-GlyphDescriptor::new_with_anchor("olinTok_VAR01", Anchor::new_stack(AnchorType::Base),
+// GlyphDescriptor::new("muTok_VAR02, ""),
+// GlyphDescriptor::new("muteTok_VAR02, ""),
+GlyphDescriptor::new_with_anchor("olinTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 500 390 m 0
  528 390 550 368 550 340 c 2
@@ -5568,8 +5568,8 @@ r#"
  556 110 548 98 543 91 c 0
  533 77 519 67 500 67 c 0"#,
 ),
-// GlyphDescriptor::new("panaTok_VAR01", ""),
-GlyphDescriptor::new_with_anchor("sewiTok_VAR01", Anchor::new_stack(AnchorType::Base),
+// GlyphDescriptor::new("panaTok_VAR02", ""),
+GlyphDescriptor::new_with_anchor("sewiTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 200 -90 m 0
  172 -90 150 -68 150 -40 c 2
@@ -5590,7 +5590,7 @@ r#"
  425 356 459 390 500 390 c 0
  541 390 575 356 575 315 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("tenpoTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("tenpoTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 362 390 m 2
  638 390 l 2
@@ -5616,7 +5616,7 @@ r#"
  540 10 l 1
  500 65 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("utaTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("utaTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 130 319 m 0
  130 347 152 369 180 369 c 2
@@ -5629,7 +5629,7 @@ r#"
  631 31 744 132 766 269 c 1
  234 269 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("wileTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("wileTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 500 -46 m 1
  475 -69 438 -90 392 -90 c 0
@@ -5656,7 +5656,7 @@ r#"
  339 100 333 80 333 68 c 0
  333 36 360 10 392 10 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("namakoTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("namakoTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 741 151 m 0
  741 123 719 101 691 101 c 2
@@ -5687,7 +5687,7 @@ r#"
  309 101 l 2
  281 101 259 123 259 151 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("sokoTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("sokoTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 711 111 m 2
  550 111 l 1
@@ -5709,7 +5709,7 @@ r#"
  427 290 385 260 360 211 c 1
  641 211 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("lanpanTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("lanpanTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 703 243 m 0
  703 218 682 193 653 193 c 0
@@ -5754,7 +5754,7 @@ r#"
  390 -32 l 2
  381 -48 365 -57 348 -57 c 0"#,
 ),
-GlyphDescriptor::new_with_anchor("misikekeTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("misikekeTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 500 393 m 0
  580 393 646 327 646 247 c 2
@@ -5776,7 +5776,7 @@ r#"
  546 102 l 1
  454 102 l 1"#,
 ),
-GlyphDescriptor::new_with_anchor("linluwiTok_VAR01", Anchor::new_stack(AnchorType::Base),
+GlyphDescriptor::new_with_anchor("linluwiTok_VAR02", Anchor::new_stack(AnchorType::Base),
 r#"
 390 158 m 0
  362 158 340 180 340 208 c 0

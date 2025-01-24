@@ -6320,7 +6320,7 @@ r#"
  320 694 322 684 322 675 c 0
  322 650 301 625 272 625 c 0"#
 ),
-GlyphDescriptor::new("akesiTok_VAR01",
+GlyphDescriptor::new("akesiTok_VAR02",
 r#"
 750 795 m 0
  750 754 716 720 675 720 c 0
@@ -6396,7 +6396,7 @@ r#"
  366 870 400 836 400 795 c 0
  400 754 366 720 325 720 c 0"#
 ),
-GlyphDescriptor::new("kalaTok_VAR01",
+GlyphDescriptor::new("kalaTok_VAR02",
 r#"
 616 575 m 1
  509 571 406 494 320 400 c 1
@@ -6449,7 +6449,7 @@ r#"
  540 433 567 460 600 460 c 0
  633 460 660 433 660 400 c 0"#
 ),
-GlyphDescriptor::new("meliTok_VAR01",
+GlyphDescriptor::new("meliTok_VAR02",
 r#"
 500 750 m 0
  417 750 350 683 350 600 c 0
@@ -6476,7 +6476,7 @@ r#"
  250 738 362 850 500 850 c 0
  638 850 750 738 750 600 c 0"#
 ),
-GlyphDescriptor::new("mijeTok_VAR01",
+GlyphDescriptor::new("mijeTok_VAR02",
 r#"
 208 259 m 0
  208 176 275 109 358 109 c 0
@@ -6501,7 +6501,7 @@ r#"
  508 676 530 698 558 698 c 2
  747 698 l 2"#
 ),
-GlyphDescriptor::new("muTok_VAR01",
+GlyphDescriptor::new("muTok_VAR02",
 r#"
 243 150 m 0
  243 121 218 100 193 100 c 0
@@ -6529,7 +6529,7 @@ r#"
  260 450 l 2
  288 450 310 428 310 400 c 0"#
 ),
-GlyphDescriptor::new("monsiTok_VAR01",
+GlyphDescriptor::new("monsiTok_VAR02",
 r#"
 800 100 m 2
  828 100 850 78 850 50 c 0
@@ -6559,7 +6559,7 @@ r#"
  550 100 l 1
  800 100 l 2"#
 ),
-GlyphDescriptor::new("muteTok_VAR01",
+GlyphDescriptor::new("muteTok_VAR02",
 r#"
 340 -25 m 0
  310 -25 290 -1 290 25 c 2
@@ -6646,7 +6646,7 @@ r#"
  528 588 l 2
  523 596 520 606 520 615 c 0"#
 ),
-GlyphDescriptor::new("olinTok_VAR01",
+GlyphDescriptor::new("olinTok_VAR02",
 r#"
 357 450 m 0
  306 450 264 408 264 357 c 0
@@ -6704,7 +6704,7 @@ r#"
  450 800 l 2
  450 828 472 850 500 850 c 0"#
 ),
-GlyphDescriptor::new("panaTok_VAR01",
+GlyphDescriptor::new("panaTok_VAR02",
 r#"
 750 783 m 0
  779 783 800 758 800 733 c 0
@@ -6732,7 +6732,7 @@ r#"
  450 800 l 2
  450 828 472 850 500 850 c 0"#
 ),
-GlyphDescriptor::new("pokaTok_VAR01",
+GlyphDescriptor::new("pokaTok_VAR02",
 r#"
 125 600 m 0
  153 600 175 578 175 550 c 2
@@ -6755,7 +6755,7 @@ r#"
  825 550 l 2
  825 578 847 600 875 600 c 0"#
 ),
-GlyphDescriptor::new("sewiTok_VAR01",
+GlyphDescriptor::new("sewiTok_VAR02",
 r#"
 575 600 m 0
  575 559 541 525 500 525 c 0
@@ -6776,7 +6776,7 @@ r#"
  200 125 l 2
  200 97 178 75 150 75 c 0"#
 ),
-GlyphDescriptor::new("sinpinTok_VAR01",
+GlyphDescriptor::new("sinpinTok_VAR02",
 r#"
 200 50 m 0
  200 78 222 100 250 100 c 2
@@ -6802,7 +6802,7 @@ r#"
  334 425 300 459 300 500 c 0
  300 541 334 575 375 575 c 0"#
 ),
-GlyphDescriptor::new("tenpoTok_VAR01",
+GlyphDescriptor::new("tenpoTok_VAR02",
 r#"
 500 312 m 1
  307 54 l 1
@@ -6828,7 +6828,7 @@ r#"
  150 828 176 850 203 850 c 2
  797 850 l 2"#
 ),
-GlyphDescriptor::new("utaTok_VAR01",
+GlyphDescriptor::new("utaTok_VAR02",
 r#"
 234 519 m 1
  256 382 369 281 500 281 c 0
@@ -6841,7 +6841,7 @@ r#"
  870 357 707 181 500 181 c 0
  293 181 130 357 130 569 c 0"#
 ),
-GlyphDescriptor::new("wileTok_VAR01",
+GlyphDescriptor::new("wileTok_VAR02",
 r#"
 300 100 m 0
  340 100 375 118 404 144 c 0
@@ -6874,7 +6874,7 @@ r#"
  950 112 838 0 700 0 c 0
  610 0 545 49 500 99 c 1"#
 ),
-GlyphDescriptor::new("namakoTok_VAR01",
+GlyphDescriptor::new("namakoTok_VAR02",
 r#"
 50 400 m 0
  50 428 72 450 100 450 c 2
@@ -6905,7 +6905,7 @@ r#"
  650 350 l 2
  622 350 600 372 600 400 c 0"#
 ),
-GlyphDescriptor::new("sokoTok_VAR01",
+GlyphDescriptor::new("sokoTok_VAR02",
 r#"
 823 470 m 1
  776 609 677 700 500 700 c 0
@@ -6927,7 +6927,7 @@ r#"
  863 638 913 544 937 430 c 0
  938 427 938 423 938 420 c 0"#
 ),
-GlyphDescriptor::new("lanpanTok_VAR01",
+GlyphDescriptor::new("lanpanTok_VAR02",
 r#"
 259 36 m 0
  229 36 209 62 209 88 c 0
@@ -6976,7 +6976,7 @@ r#"
  892 612 l 2
  897 604 900 595 900 586 c 0"#
 ),
-GlyphDescriptor::new("misikekeTok_VAR01",
+GlyphDescriptor::new("misikekeTok_VAR02",
 r#"
 350 350 m 1
  350 200 l 2
@@ -6998,7 +6998,7 @@ r#"
  250 600 l 2
  250 738 362 850 500 850 c 0"#
 ),
-GlyphDescriptor::new("linluwiTok_VAR01",
+GlyphDescriptor::new("linluwiTok_VAR02",
 r#"
 250 318 m 1
  280 330 318 340 358 340 c 0
