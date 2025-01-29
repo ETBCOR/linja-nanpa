@@ -580,7 +580,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
 
         let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
 
-        format!("ContextSub2: class \"'calt' SPECIFIC COMBOS\" 4 4 4 2\n{subs}")
+        format!("ContextSub2: class \"'calt' CHANGE ZWJ\" 4 4 4 2\n{subs}")
     };
 
     let mut main_blocks = vec![
@@ -604,64 +604,66 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     ];
 
     let chain_subs = {
-        let ctrl_names = ctrl_block
-            .glyphs
-            .iter()
-            .filter_map(|glyph| {
-                if glyph.glyph.name.contains("Half") {
-                    None
-                } else {
-                    Some(format!(
-                        "{}{}{}",
-                        ctrl_block.prefix, glyph.glyph.name, ctrl_block.suffix
-                    ))
-                }
-            })
-            .join(" ");
-
-        let main_names = main_blocks
-            .iter()
-            .map(|block| {
-                block
-                    .glyphs
-                    .iter()
-                    .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
-                    .join(" ")
-            })
-            .join(" ");
-
         let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
 
-        let base = put_in_class(format!(
-            "{} joinStackTok joinScaleTok {}",
-            ctrl_names, main_names
-        ));
+        let base = {
+            let ctrl_names = ctrl_block
+                .glyphs
+                .iter()
+                .filter_map(|glyph| {
+                    if glyph.glyph.name.contains("Half") {
+                        None
+                    } else {
+                        Some(format!(
+                            "{}{}{}",
+                            ctrl_block.prefix, glyph.glyph.name, ctrl_block.suffix
+                        ))
+                    }
+                })
+                .join(" ");
+
+            let main_names = main_blocks
+                .iter()
+                .map(|block| {
+                    block
+                        .glyphs
+                        .iter()
+                        .map(|glyph| format!("{}{}{}", block.prefix, glyph.glyph.name, block.suffix))
+                        .join(" ")
+                })
+                .join(" ");
+
+            put_in_class(format!(
+                "{} joinStackTok joinScaleTok {}",
+                ctrl_names, main_names
+            ))
+        };
 
         let cart = put_in_class("combCartExtNoneTok combCartExtHalfTok startCartTok combCartExtTok startCartAltTok".to_string());
 
-        let cont = start_long_glyph_block
-            .glyphs
-            .iter()
-            .filter_map(|glyph| {
-                if glyph.glyph.name.eq("laTok") {
-                    None
-                } else {
-                    Some(format!(
-                        "{}{}{}",
-                        start_long_glyph_block.prefix,
-                        glyph.glyph.name,
-                        start_long_glyph_block.suffix
-                    ))
-                }
-            })
-            .join(" ");
+        let cont =  {
+            let longs = start_long_glyph_block
+                .glyphs
+                .iter()
+                .filter_map(|glyph| {
+                    if glyph.glyph.name.eq("laTok") {
+                        None
+                    } else {
+                        Some(format!(
+                            "{}{}{}",
+                            start_long_glyph_block.prefix,
+                            glyph.glyph.name,
+                            start_long_glyph_block.suffix
+                        ))
+                    }
+                })
+                .join(" ");
 
-        let cont = put_in_class(format!("combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok {}", cont));
+            put_in_class(format!("combLongGlyphExtHalfTok startLongPiTok combLongPiExtTok startLongGlyphTok combLongGlyphExtTok startRevLongGlyphTok {}", longs))
+        };
 
         let put_in_sub = |c: &str| format!("  {c}{base}\n  {c}{cart}\n  {c}{cont}\n");
-
         let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
-
         format!("ChainSub2: class \"'calt' CART AND CONT\" 4 4 4 2\n{subs}")
     };
 
@@ -684,9 +686,9 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     );
     let mut file = File::create(filename)?;
 
-    writeln!(
-        &mut file,
-        r#"{HEADER}Version: {VERSION}
+    // FINAL `.sfd` COMPOSITIION
+    writeln!( &mut file,
+r#"{HEADER}Version: {VERSION}
 {DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}DEI: 91125
 {context_subs}{AFTER_CONTEXT_SUBS}{chain_subs}{AFTER_CHAIN_SUBS}{VERSION}{OTHER}BeginChars: {ff_pos} {ff_pos}
 {glyphs_string}EndChars

@@ -271,12 +271,12 @@ impl Lookups {
             // Used in tok_block and tok_ext_block when NasinNanpaVariation == Main
             Lookups::WordLigFromLetters => {
                 let lig = name.chars().join(" ");
-                let ali = if full_name.eq("aleTok") {
+                let special = if full_name.eq("aleTok") {
                     "Ligature2: \"'liga' WORD PLUS SPACE\" a l i space\nLigature2: \"'liga' WORD\" a l i\n"
                 } else {
                     ""
                 };
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n{ali}")
+                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n{special}")
             }
 
             // Used in ctrl_block, tok_ctrl_block, and tok_no_combo_block

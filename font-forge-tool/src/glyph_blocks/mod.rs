@@ -78,7 +78,7 @@ Lookup: 4 0 0 "'liga' WORDS" { "'liga' WORD PLUS SPACE"  "'liga' WORD"  } ['liga
 Lookup: 3 0 0 "'rand' RAND VARIATIONS" { "'rand' RAND VARIATIONS"  } ['rand' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' VARIATIONS" { "'liga' VAR PLUS SPACE"  "'liga' VAR"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' START CONTAINER" { "'liga' START CONTAINER"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 5 0 0 "'calt' SPECIFIC COMBOS" { "'calt' SPECIFIC COMBOS"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 5 0 0 "'calt' CHANGE ZWJ" { "'calt' CHANGE ZWJ"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'ss01' BECOME SCALE" { "'ss01' BECOME SCALE"  } ['ss01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'ss02' BECOME STACK" { "'ss02' BECOME STACK"  } ['ss02' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' GLYPH THEN JOINER" { "'liga' GLYPH THEN JOINER"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
