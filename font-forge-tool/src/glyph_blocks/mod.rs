@@ -79,8 +79,8 @@ Lookup: 3 0 0 "'rand' RAND VARIATIONS" { "'rand' RAND VARIATIONS"  } ['rand' ('D
 Lookup: 4 0 0 "'liga' VARIATIONS" { "'liga' VAR PLUS SPACE"  "'liga' VAR"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' START CONTAINER" { "'liga' START CONTAINER"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 5 0 0 "'calt' CHANGE ZWJ" { "'calt' CHANGE ZWJ"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "'ss01' BECOME SCALE" { "'ss01' BECOME SCALE"  } ['ss01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 1 0 0 "'ss02' BECOME STACK" { "'ss02' BECOME STACK"  } ['ss02' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "'ss01' ZWJ TO SCALE" { "'ss01' ZWJ TO SCALE"  } ['ss01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "'ss02' ZWJ TO STACK" { "'ss02' ZWJ TO STACK"  } ['ss02' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' GLYPH THEN JOINER" { "'liga' GLYPH THEN JOINER"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 2 0 0 "'ccmp' RESPAWN JOINER" { "'ccmp' RESPAWN JOINER"  } ['ccmp' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' JOINER THEN GLYPH" { "'liga' JOINER THEN GLYPH"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
@@ -97,13 +97,13 @@ pub const AFTER_CONTEXT_SUBS: &str = r#" 2 0 0
   BClsList:
   FClsList:
  1
-  SeqLookup: 1 "'ss01' BECOME SCALE"
+  SeqLookup: 1 "'ss01' ZWJ TO SCALE"
  2 0 0
   ClsList: 3 1
   BClsList:
   FClsList:
  1
-  SeqLookup: 1 "'ss02' BECOME STACK"
+  SeqLookup: 1 "'ss02' ZWJ TO STACK"
   ClassNames: "other" "zwj" "scale" "stack"
   BClassNames: "other" "zwj" "scale" "stack"
   FClassNames: "other" "zwj" "scale" "stack"

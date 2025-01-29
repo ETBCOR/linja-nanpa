@@ -292,7 +292,7 @@ impl Lookups {
                         which = if word.contains("start") { "startCart" } else { "endCart" }
                     )
                 } else if name.eq("ZWJ") {
-                    "Substitution2: \"'ss02' BECOME STACK\" joinStackTok\nSubstitution2: \"'ss01' BECOME SCALE\" joinScaleTok\n".to_string()
+                    "Substitution2: \"'ss02' ZWJ TO STACK\" joinStackTok\nSubstitution2: \"'ss01' ZWJ TO SCALE\" joinScaleTok\n".to_string()
                 } else if word.eq("i t a n") {
                     "Ligature2: \"'liga' VAR\" ijoTok ZWJ tanTok ZWJ anpaTok ZWJ nanpaTok\n".to_string()
                 } else if word.eq("l e p e k a") {
