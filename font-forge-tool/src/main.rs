@@ -15,6 +15,7 @@ enum NasinNanpaVariation {
 fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let mut ff_pos: usize = 0;
 
+    let  cart_lines_ref = vec![Ref::new(Encoding::new(34, EncPos::Pos(0xF1990)), "N 1 0 0 1 0 0 2")]; // 34: the position of `combCartExtTok`
     let mut ctrl_block = GlyphBlock::new_from_enc_glyphs(
         &mut ff_pos,
         vec![
@@ -91,7 +92,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -528 -300 -550 -278 -550 -250 c 2
  -550 -150 l 2
  -550 -122 -528 -100 -500 -100 c 0"#,
-                    vec![],
+                    cart_lines_ref.clone()
                 ),
             ),
             GlyphEnc::new_from_parts(
@@ -114,7 +115,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -628 -300 -650 -278 -650 -250 c 2
  -650 -150 l 2
  -650 -122 -628 -100 -600 -100 c 0"#,
-                    vec![],
+                    cart_lines_ref.clone()
                 ),
             ),
             GlyphEnc::new_from_parts(
@@ -144,7 +145,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -728 -300 -750 -278 -750 -250 c 2
  -750 -150 l 2
  -750 -122 -728 -100 -700 -100 c 0"#,
-                    vec![],
+                    cart_lines_ref.clone()
                 ),
             ),
             GlyphEnc::new_from_parts(
@@ -181,7 +182,113 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -828 -300 -850 -278 -850 -250 c 2
  -850 -150 l 2
  -850 -122 -828 -100 -800 -100 c 0"#,
-                    vec![],
+                    cart_lines_ref.clone()
+                ),
+            ),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt5TickTok",
+                0,
+                Rep::new(
+                    r#"
+-500 1100 m 4
+ -472 1100 -450 1078 -450 1050 c 6
+ -450 950 l 6
+ -450 922 -472 900 -500 900 c 4
+ -528 900 -550 922 -550 950 c 6
+ -550 1050 l 6
+ -550 1078 -528 1100 -500 1100 c 4"#,
+                    cart_lines_ref.clone()
+                ),
+            ),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt6TickTok",
+                0,
+                Rep::new(
+                    r#"
+-400 1100 m 4
+ -372 1100 -350 1078 -350 1050 c 6
+ -350 950 l 6
+ -350 922 -372 900 -400 900 c 4
+ -428 900 -450 922 -450 950 c 6
+ -450 1050 l 6
+ -450 1078 -428 1100 -400 1100 c 4
+-600 1100 m 4
+ -572 1100 -550 1078 -550 1050 c 6
+ -550 950 l 6
+ -550 922 -572 900 -600 900 c 4
+ -628 900 -650 922 -650 950 c 6
+ -650 1050 l 6
+ -650 1078 -628 1100 -600 1100 c 4"#,
+                    cart_lines_ref.clone()
+                ),
+            ),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt7TickTok",
+                0,
+                Rep::new(
+                    r#"
+-300 1100 m 4
+ -272 1100 -250 1078 -250 1050 c 6
+ -250 950 l 6
+ -250 922 -272 900 -300 900 c 4
+ -328 900 -350 922 -350 950 c 6
+ -350 1050 l 6
+ -350 1078 -328 1100 -300 1100 c 4
+-500 1100 m 4
+ -472 1100 -450 1078 -450 1050 c 6
+ -450 950 l 6
+ -450 922 -472 900 -500 900 c 4
+ -528 900 -550 922 -550 950 c 6
+ -550 1050 l 6
+ -550 1078 -528 1100 -500 1100 c 4
+-700 1100 m 4
+ -672 1100 -650 1078 -650 1050 c 6
+ -650 950 l 6
+ -650 922 -672 900 -700 900 c 4
+ -728 900 -750 922 -750 950 c 6
+ -750 1050 l 6
+ -750 1078 -728 1100 -700 1100 c 4"#,
+                    cart_lines_ref.clone()
+                ),
+            ),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt8TickTok",
+                0,
+                Rep::new(
+                    r#"
+-400 1100 m 4
+ -372 1100 -350 1078 -350 1050 c 6
+ -350 950 l 6
+ -350 922 -372 900 -400 900 c 4
+ -428 900 -450 922 -450 950 c 6
+ -450 1050 l 6
+ -450 1078 -428 1100 -400 1100 c 4
+-200 1100 m 4
+ -172 1100 -150 1078 -150 1050 c 6
+ -150 950 l 6
+ -150 922 -172 900 -200 900 c 4
+ -228 900 -250 922 -250 950 c 6
+ -250 1050 l 6
+ -250 1078 -228 1100 -200 1100 c 4
+-600 1100 m 4
+ -572 1100 -550 1078 -550 1050 c 6
+ -550 950 l 6
+ -550 922 -572 900 -600 900 c 4
+ -628 900 -650 922 -650 950 c 6
+ -650 1050 l 6
+ -650 1078 -628 1100 -600 1100 c 4
+-800 1100 m 4
+ -772 1100 -750 1078 -750 1050 c 6
+ -750 950 l 6
+ -750 922 -772 900 -800 900 c 4
+ -828 900 -850 922 -850 950 c 6
+ -850 1050 l 6
+ -850 1078 -828 1100 -800 1100 c 4"#,
+                    cart_lines_ref
                 ),
             ),
             GlyphEnc::new_from_parts(EncPos::Pos(0xE01EF), "VAR256", 0, Rep::default()),
@@ -210,10 +317,14 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             String::new(),
             String::new(),
             String::new(),
-            "comma".to_string(),
+            "combCartExtTok comma".to_string(),
             "comma comma".to_string(),
             "comma comma comma".to_string(),
             "comma comma comma comma".to_string(),
+            "combCartExtTok quotesingle".to_string(),
+            "quotesingle quotesingle".to_string(),
+            "quotesingle quotesingle quotesingle".to_string(),
+            "quotesingle quotesingle quotesingle quotesingle".to_string(),
             String::new(),
         ]),
         Cc::Participant,
@@ -611,7 +722,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                 .glyphs
                 .iter()
                 .filter_map(|glyph| {
-                    if glyph.glyph.name.contains("Half") {
+                    if glyph.glyph.name.contains("Half") || glyph.glyph.name.contains("Tick") {
                         None
                     } else {
                         Some(format!(
@@ -639,7 +750,15 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             ))
         };
 
-        let cart = put_in_class("combCartExtNoneTok combCartExtHalfTok startCartTok combCartExtTok startCartAltTok".to_string());
+        let cart = put_in_class(
+            format!("{} {} {}",
+                "combCartExtHalfTok combCartExtNoneTok",
+                (1..=8).map(|x| format!("combCartExt{}TickTok", x)).join(" "),
+                "startCartTok combCartExtTok startCartAltTok"
+            )
+        );
+                // .iter()
+                // .map(|s| format!("{}Tok", s))
 
         let cont =  {
             let longs = start_long_glyph_block

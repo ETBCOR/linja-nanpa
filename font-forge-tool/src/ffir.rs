@@ -554,8 +554,18 @@ impl GlyphFull {
             .gen(name.to_string(), full_name.clone(), variation);
         let cc_subs = match self.cc_subs {
             Cc::Full => format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtTok\n"),
-            Cc::Half => format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtHalfTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtHalfTok\n"),
-            Cc::Participant => format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtNoneTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combCartExtNoneTok\n"),
+            Cc::Half => if full_name.eq("comma") {
+                "MultipleSubs2: \"'cc01' CART\" combCartExt1TickTok\nMultipleSubs2: \"'cc02' CONT\" commaTok combLongGlyphExtHalfTok\n".to_string()
+            } else if full_name.eq("quotesingle") {
+                "MultipleSubs2: \"'cc01' CART\" combCartExt5TickTok\nMultipleSubs2: \"'cc02' CONT\" commaTok combLongGlyphExtHalfTok\n".to_string()
+            } else {
+                format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtHalfTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtHalfTok\n")
+            },
+            Cc::Participant => if full_name.contains("Tick") {
+                format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtNoneTok\n")
+            } else {
+                format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtNoneTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combCartExtNoneTok\n")
+            },
             Cc::None => String::new(),
         };
         let flags = if full_name.eq("ZWJ")
