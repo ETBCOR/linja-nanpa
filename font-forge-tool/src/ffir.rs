@@ -556,9 +556,9 @@ impl GlyphFull {
         let cc_subs = match self.cc_subs {
             Cc::Full => format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtTok\n"),
             Cc::Half => if full_name.eq("comma") {
-                "MultipleSubs2: \"'cc01' CART\" combCartExt1TickTok\nMultipleSubs2: \"'cc02' CONT\" commaTok combLongGlyphExtHalfTok\n".to_string()
+                "MultipleSubs2: \"'cc01' CART\" combCartExt1TickTok\nMultipleSubs2: \"'cc02' CONT\" combLongGlyphExtHalfTok\n".to_string()
             } else if full_name.eq("quotesingle") {
-                "MultipleSubs2: \"'cc01' CART\" combCartExt5TickTok\nMultipleSubs2: \"'cc02' CONT\" commaTok combLongGlyphExtHalfTok\n".to_string()
+                "MultipleSubs2: \"'cc01' CART\" combCartExt5TickTok\nMultipleSubs2: \"'cc02' CONT\" combLongGlyphExtHalfTok\n".to_string()
             } else {
                 format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtHalfTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtHalfTok\n")
             },
