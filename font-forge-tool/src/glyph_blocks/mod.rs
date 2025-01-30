@@ -88,7 +88,7 @@ Lookup: 6 0 0 "'calt' CART AND CONT" { "'calt' CART AND CONT"  } ['calt' ('DFLT'
 Lookup: 2 2 0 "'cc01' CART" { "'cc01' CART"  } ['cc01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 2 2 0 "'cc02' CONT" { "'cc02' CONT"  } ['cc02' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' CC CLEANUP" { "'liga' CC CLEANUP"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 260 0 0 "'mark' POSITION COMBO" { "'mark' POSITION COMBO"  } ['mark' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' POSITION COMBO" { "'mark' STACK"  "'mark' SCALE"  } ['mark' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 MarkAttachClasses: 1
 "#;
 

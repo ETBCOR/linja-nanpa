@@ -453,8 +453,6 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         EncPos::Pos(0xF19A0),
         1000,
     );
-    tok_ext_block.glyphs[8].encoding.enc_pos = EncPos::Pos(0xf19ae);
-    tok_ext_block.glyphs[7].encoding.enc_pos = EncPos::Pos(0xf19c0);
 
     let tok_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
