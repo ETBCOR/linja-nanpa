@@ -355,17 +355,18 @@ impl Lookups {
                 let glyph = parts[0];
                 let sel = parts[1];
 
-                let a = if full_name.eq("aTok_VAR01") {
-                    "Ligature2: \"'liga' VAR\" semeTok ZWJ aTok\nLigature2: \"'liga' VAR\" aTok ZWJ semeTok\n"
-                } else if full_name.eq("aTok_VAR02") {
+                let a = if full_name.eq("aTok_VAR02") {
                     "Ligature2: \"'liga' VAR\" aTok aTok\n"
                 } else if full_name.eq("aTok_VAR03") {
                     "Ligature2: \"'liga' VAR\" aTok aTok aTok\n"
-                } else if full_name.eq("aTok_VAR04") && variation == NasinNanpaVariation::Main {
-                    "Ligature2: \"'liga' VAR PLUS SPACE\" exclam question space\nLigature2: \"'liga' VAR PLUS SPACE\" question exclam space\nLigature2: \"'liga' VAR\" exclam question\nLigature2: \"'liga' VAR\" question exclam\n"
-                } else {
-                    ""
-                };
+                } else if full_name.eq("aTok_VAR04") {
+                    "Ligature2: \"'liga' VAR\" semeTok ZWJ aTok\nLigature2: \"'liga' VAR\" aTok ZWJ semeTok\n"
+                } else if full_name.eq("aTok_VAR05") && variation == NasinNanpaVariation::Main {
+r#"Ligature2: "'liga' VAR PLUS SPACE" aTok exclam question space
+Ligature2: "'liga' VAR PLUS SPACE" aTok question exclam space
+Ligature2: "'liga' VAR" aTok exclam question
+Ligature2: "'liga' VAR" aTok question exclam
+"#              } else { "" };
 
                 let arrow_lig = if full_name.contains("niTok_arrow") {
                     format!("Ligature2: \"'liga' VAR\" {glyph} ZWJ {sel}\n")
