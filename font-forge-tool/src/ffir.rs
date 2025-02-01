@@ -577,6 +577,7 @@ impl GlyphFull {
             || full_name.eq("joinScaleTok")
             || full_name.contains("space")
             || full_name.eq("combCartExtNoneTok")
+            || full_name.ends_with("Rad")
         {
             "Flags: W\n"
         } else {

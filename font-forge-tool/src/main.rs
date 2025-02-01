@@ -423,6 +423,18 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     no_comb_block.glyphs[1].encoding.enc_pos = EncPos::Pos(0xF199D);
     no_comb_block.glyphs[4].encoding.enc_pos = EncPos::Pos(0x3000);
 
+    let radicals_block = GlyphBlock::new_from_constants(
+        &mut ff_pos,
+        RADICALS.as_slice(),
+        LookupsMode::None,
+        Cc::Full,
+        "",
+        "Rad",
+        "7777cc",
+        EncPos::Pos(0xF1C80),
+        1000,
+    );
+
     let base_cor_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         BASE_COR.as_slice(),
@@ -439,7 +451,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let base_ext_block = GlyphBlock::new_from_constants(
+    let mut base_ext_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         BASE_EXT.as_slice(),
         if variation == NasinNanpaVariation::Main {
@@ -696,23 +708,12 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     };
 
     let mut main_blocks = vec![
-        latn_block,
-        no_comb_block,
-        base_cor_block,
-        base_ext_block,
-        base_alt_block,
-        outer_cor_block,
-        outer_ext_block,
-        outer_alt_block,
-        inner_cor_block,
-        inner_ext_block,
-        inner_alt_block,
-        lower_cor_block,
-        lower_ext_block,
-        lower_alt_block,
-        upper_cor_block,
-        upper_ext_block,
-        upper_alt_block,
+        latn_block,      no_comb_block,   radicals_block,
+        base_cor_block,  base_ext_block,  base_alt_block,
+        outer_cor_block, outer_ext_block, outer_alt_block,
+        inner_cor_block, inner_ext_block, inner_alt_block,
+        lower_cor_block, lower_ext_block, lower_alt_block,
+        upper_cor_block, upper_ext_block, upper_alt_block,
     ];
 
     let chain_subs = {
