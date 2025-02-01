@@ -397,7 +397,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         GlyphBlock::new_empty(&mut ff_pos, 0, 0)
     };
 
-    let mut tok_no_comb_block = GlyphBlock::new_from_constants(
+    let mut no_comb_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         TOK_NO_COMB.as_slice(),
         LookupsMode::WordLigManual(vec![
@@ -419,11 +419,11 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         EncPos::None,
         1000,
     );
-    tok_no_comb_block.glyphs[0].encoding.enc_pos = EncPos::Pos(0xF199C);
-    tok_no_comb_block.glyphs[1].encoding.enc_pos = EncPos::Pos(0xF199D);
-    tok_no_comb_block.glyphs[4].encoding.enc_pos = EncPos::Pos(0x3000);
+    no_comb_block.glyphs[0].encoding.enc_pos = EncPos::Pos(0xF199C);
+    no_comb_block.glyphs[1].encoding.enc_pos = EncPos::Pos(0xF199D);
+    no_comb_block.glyphs[4].encoding.enc_pos = EncPos::Pos(0x3000);
 
-    let tok_block = GlyphBlock::new_from_constants(
+    let base_cor_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         BASE_COR.as_slice(),
         if variation == NasinNanpaVariation::Main {
@@ -439,7 +439,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let mut tok_ext_block = GlyphBlock::new_from_constants(
+    let base_ext_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         BASE_EXT.as_slice(),
         if variation == NasinNanpaVariation::Main {
@@ -455,7 +455,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_alt_block = GlyphBlock::new_from_constants(
+    let base_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         BASE_ALT.as_slice(),
         LookupsMode::Alt,
@@ -467,7 +467,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_outer_block = GlyphBlock::new_from_constants(
+    let outer_cor_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         OUTER_COR.as_slice(),
         LookupsMode::ComboFirst,
@@ -479,7 +479,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_ext_outer_block = GlyphBlock::new_from_constants(
+    let outer_ext_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         OUTER_EXT.as_slice(),
         LookupsMode::ComboFirst,
@@ -491,7 +491,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_alt_outer_block = GlyphBlock::new_from_constants(
+    let outer_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         OUTER_ALT.as_slice(),
         LookupsMode::ComboFirst,
@@ -503,7 +503,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_inner_block = GlyphBlock::new_from_constants(
+    let inner_cor_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         INNER_COR.as_slice(),
         LookupsMode::ComboLast,
@@ -515,7 +515,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         0,
     );
 
-    let tok_ext_inner_block = GlyphBlock::new_from_constants(
+    let inner_ext_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         INNER_EXT.as_slice(),
         LookupsMode::ComboLast,
@@ -527,7 +527,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         0,
     );
 
-    let tok_alt_inner_block = GlyphBlock::new_from_constants(
+    let inner_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         INNER_ALT.as_slice(),
         LookupsMode::ComboLast,
@@ -539,7 +539,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         0,
     );
 
-    let tok_lower_block = GlyphBlock::new_from_constants(
+    let lower_cor_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         LOWER_COR.as_slice(),
         LookupsMode::ComboFirst,
@@ -551,7 +551,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_ext_lower_block = GlyphBlock::new_from_constants(
+    let lower_ext_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         LOWER_EXT.as_slice(),
         LookupsMode::ComboFirst,
@@ -563,7 +563,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_alt_lower_block = GlyphBlock::new_from_constants(
+    let lower_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
         LOWER_ALT.as_slice(),
         LookupsMode::ComboFirst,
@@ -575,7 +575,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         1000,
     );
 
-    let tok_upper_block = tok_lower_block.new_from_refs(
+    let upper_cor_block = lower_cor_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 -1000 500 2".to_string(),
         LookupsMode::ComboLast,
@@ -588,7 +588,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
-    let tok_ext_upper_block = tok_ext_lower_block.new_from_refs(
+    let upper_ext_block = lower_ext_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 -1000 500 2".to_string(),
         LookupsMode::ComboLast,
@@ -601,7 +601,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
-    let tok_alt_upper_block = tok_alt_lower_block.new_from_refs(
+    let upper_alt_block = lower_alt_block.new_from_refs(
         &mut ff_pos,
         "S 1 0 0 1 -1000 500 2".to_string(),
         LookupsMode::ComboLast,
@@ -615,7 +615,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     );
 
     let context_subs = {
-        let scale_names = vec![&tok_outer_block, &tok_ext_outer_block, &tok_alt_outer_block]
+        let scale_names = vec![&outer_cor_block, &outer_ext_block, &outer_alt_block]
             .iter()
             .enumerate()
             .map(|(i, &block)| {
@@ -637,7 +637,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             })
             .join(" ");
 
-        let scale_glyphs = vec![&tok_outer_block, &tok_ext_outer_block, &tok_alt_outer_block]
+        let scale_glyphs = vec![&outer_cor_block, &outer_ext_block, &outer_alt_block]
             .iter()
             .map(|block| {
                 block
@@ -655,7 +655,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             .flatten()
             .collect::<HashSet<_>>();
 
-        let stack_names = vec![&tok_lower_block, &tok_ext_lower_block, &tok_alt_lower_block]
+        let stack_names = vec![&lower_cor_block, &lower_ext_block, &lower_alt_block]
             .iter()
             .enumerate()
             .map(|(i, block)| {
@@ -695,22 +695,22 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
 
     let mut main_blocks = vec![
         latn_block,
-        tok_no_comb_block,
-        tok_block,
-        tok_ext_block,
-        tok_alt_block,
-        tok_outer_block,
-        tok_ext_outer_block,
-        tok_alt_outer_block,
-        tok_inner_block,
-        tok_ext_inner_block,
-        tok_alt_inner_block,
-        tok_lower_block,
-        tok_ext_lower_block,
-        tok_alt_lower_block,
-        tok_upper_block,
-        tok_ext_upper_block,
-        tok_alt_upper_block,
+        no_comb_block,
+        base_cor_block,
+        base_ext_block,
+        base_alt_block,
+        outer_cor_block,
+        outer_ext_block,
+        outer_alt_block,
+        inner_cor_block,
+        inner_ext_block,
+        inner_alt_block,
+        lower_cor_block,
+        lower_ext_block,
+        lower_alt_block,
+        upper_cor_block,
+        upper_ext_block,
+        upper_alt_block,
     ];
 
     let chain_subs = {
