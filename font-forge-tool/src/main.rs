@@ -454,6 +454,8 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         EncPos::Pos(0xF19A0),
         1000,
     );
+    base_ext_block.glyphs[41].encoding.enc_pos = EncPos::None;
+    base_ext_block.glyphs[42].encoding.enc_pos = EncPos::None;
 
     let base_alt_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
