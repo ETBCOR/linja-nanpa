@@ -1,7 +1,7 @@
 use crate::GlyphDescriptor;
 
 //MARK: BASE
-pub const TOK: [GlyphDescriptor; 137] = [
+pub const BASE_COR: [GlyphDescriptor; 137] = [
 GlyphDescriptor::new("a",
 r#"
 500 50 m 0
@@ -4265,7 +4265,7 @@ r#"
 ),
 ];
 
-pub const TOK_EXT: [GlyphDescriptor; 42] = [
+pub const BASE_EXT: [GlyphDescriptor; 42] = [
 GlyphDescriptor::new("pake",
 r#"
 150 800 m 2
@@ -6105,7 +6105,7 @@ r#"
 ),
 ];
 
-pub const TOK_ALT: [GlyphDescriptor; 55] = [
+pub const BASE_ALT: [GlyphDescriptor; 55] = [
 GlyphDescriptor::new("jakiTok_VAR01",
 r#"
 825 817 m 0

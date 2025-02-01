@@ -1,7 +1,7 @@
 use crate::{GlyphDescriptor, Anchor, AnchorType};
 
 //MARK: OUTER
-pub const TOK_OUTER: [GlyphDescriptor; 60] = [
+pub const OUTER_COR: [GlyphDescriptor; 60] = [
 GlyphDescriptor::new_with_anchor("akesi", Anchor::new_scale(AnchorType::Base, (500, 310)),
 r#"
 675 740 m 0
@@ -1727,10 +1727,10 @@ r#"
 ),
 ];
 
-pub const TOK_EXT_OUTER: [GlyphDescriptor; 0] = [
+pub const OUTER_EXT: [GlyphDescriptor; 0] = [
 ];
 
-pub const TOK_ALT_OUTER: [GlyphDescriptor; 16] = [
+pub const OUTER_ALT: [GlyphDescriptor; 16] = [
 GlyphDescriptor::new_with_anchor("koTok_VAR01", Anchor::new_scale(AnchorType::Base, (500, 430)),
 r#"
 71 693 m 0

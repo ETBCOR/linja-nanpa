@@ -1,7 +1,7 @@
 use crate::{GlyphDescriptor, Anchor, AnchorType};
 
 //MARK: LOWER
-pub const TOK_LOWER: [GlyphDescriptor; 137] = [
+pub const LOWER_COR: [GlyphDescriptor; 137] = [
 GlyphDescriptor::new_with_anchor("a", Anchor::new_stack(AnchorType::Base),
 r#"
 550 340 m 2
@@ -3902,7 +3902,7 @@ r#"
 ),
 ];
 
-pub const TOK_EXT_LOWER: [GlyphDescriptor; 10] = [
+pub const LOWER_EXT: [GlyphDescriptor; 10] = [
 GlyphDescriptor::new_with_anchor("pake", Anchor::new_stack(AnchorType::Base),
 r#"
 310 390 m 2
@@ -4273,7 +4273,7 @@ r#"
 ),
 ];
 
-pub const TOK_ALT_LOWER: [GlyphDescriptor; 38] = [
+pub const LOWER_ALT: [GlyphDescriptor; 38] = [
 GlyphDescriptor::new_with_anchor("jakiTok_VAR01", Anchor::new_stack(AnchorType::Base),
 r#"
 554 136 m 1
