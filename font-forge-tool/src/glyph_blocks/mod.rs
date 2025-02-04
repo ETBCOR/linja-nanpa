@@ -150,6 +150,6 @@ ForceBold 5 false
 LanguageGroup 1 0
 ExpansionFactor 4 0.06
 EndPrivate
-AnchorClass2: "stack" "'mark' POSITION COMBO" "scale" "'mark' POSITION COMBO"
+AnchorClass2: "stack" "'mark' STACK" "scale" "'mark' SCALE"
 "#;
 
