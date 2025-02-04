@@ -1,7 +1,7 @@
 use crate::{GlyphDescriptor, Anchor, AnchorType};
 
 //MARK: OUTER
-pub const OUTER_COR: [GlyphDescriptor; 60] = [
+pub const OUTER_COR: [GlyphDescriptor; 63] = [
 GlyphDescriptor::new_with_anchor("akesi", Anchor::new_scale(AnchorType::Base, (500, 310)),
 r#"
 675 740 m 0
@@ -578,6 +578,24 @@ r#"
  890 400 l 2
  890 615 715 790 500 790 c 0"#,
 ),
+GlyphDescriptor::new_with_anchor("mi", Anchor::new_scale(AnchorType::Base, (500, 525)),
+r#"
+250 525 m 0
+ 250 387 362 275 500 275 c 0
+ 638 275 750 387 750 525 c 0
+ 750 663 638 775 500 775 c 0
+ 362 775 250 663 250 525 c 0
+252 -39 m 0
+ 250 -34 150 304 150 525 c 0
+ 150 718 307 875 500 875 c 0
+ 693 875 850 718 850 525 c 0
+ 850 332 693 175 500 175 c 0
+ 418 175 343 203 284 250 c 1
+ 288 228 312 114 348 -11 c 0
+ 350 -17 350 -21 350 -26 c 0
+ 350 -55 324 -74 298 -74 c 0
+ 279 -74 259 -64 252 -39 c 0"#,
+),
 GlyphDescriptor::new_with_anchor("mije", Anchor::new_scale(AnchorType::Base, (500, 475)),
 r#"
 250 475 m 0
@@ -874,6 +892,25 @@ r#"
  192 12 277 10 490 10 c 0
  692 10 700 91 700 135 c 0"#,
 ),
+GlyphDescriptor::new_with_anchor("ona", Anchor::new_scale(AnchorType::Base, (625, 400)),
+r#"
+625 150 m 0
+ 763 150 875 262 875 400 c 0
+ 875 538 763 650 625 650 c 0
+ 487 650 375 538 375 400 c 0
+ 375 262 487 150 625 150 c 0
+625 50 m 0
+ 406 50 73 148 61 152 c 0
+ 39 158 25 178 25 200 c 0
+ 25 205 26 209 27 214 c 0
+ 27 215 38 250 74 250 c 0
+ 80 250 86 249 93 247 c 0
+ 112 241 222 210 350 184 c 1
+ 303 243 275 318 275 400 c 0
+ 275 593 432 750 625 750 c 0
+ 818 750 975 593 975 400 c 0
+ 975 207 818 50 625 50 c 0"#,
+),
 GlyphDescriptor::new_with_anchor("open", Anchor::new_scale(AnchorType::Base, (500, 580)),
 r#"
 250 225 m 1
@@ -1055,6 +1092,25 @@ r#"
  990 282 968 260 940 260 c 2
  800 260 l 2
  772 260 750 282 750 310 c 0"#,
+),
+GlyphDescriptor::new_with_anchor("sina", Anchor::new_scale(AnchorType::Base, (500, 275)),
+r#"
+250 275 m 0
+ 250 137 362 25 500 25 c 0
+ 638 25 750 137 750 275 c 0
+ 750 413 638 525 500 525 c 0
+ 362 525 250 413 250 275 c 0
+150 275 m 0
+ 150 494 248 827 252 839 c 0
+ 258 861 278 875 300 875 c 0
+ 305 875 309 874 314 873 c 0
+ 315 873 350 862 350 826 c 0
+ 350 820 349 814 347 807 c 0
+ 341 788 310 678 284 550 c 1
+ 343 597 418 625 500 625 c 0
+ 693 625 850 468 850 275 c 0
+ 850 82 693 -75 500 -75 c 0
+ 307 -75 150 82 150 275 c 0"#,
 ),
 GlyphDescriptor::new_with_anchor("sinpin", Anchor::new_scale(AnchorType::Base, (350, 400)),
 r#"
