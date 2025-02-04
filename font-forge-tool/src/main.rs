@@ -15,13 +15,127 @@ enum NasinNanpaVariation {
 fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     let mut ff_pos: usize = 0;
 
-    let  cart_lines_ref = vec![Ref::new(Encoding::new(34, EncPos::Pos(0xF1990)), "N 1 0 0 1 0 0 2")]; // 34: the position of `combCartExtTok`
     let mut ctrl_block = GlyphBlock::new_from_enc_glyphs(
         &mut ff_pos,
         vec![
             GlyphEnc::new_from_parts(EncPos::Pos(0x0000), "NUL", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x200B), "ZWSP", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x200C), "ZWNJ", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0x200D), "ZWJ", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2190), "arrowW", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2191), "arrowN", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2192), "arrowE", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2193), "arrowS", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2196), "arrowNW", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2197), "arrowNE", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2198), "arrowSE", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0x2199), "arrowSW", 0, Rep::default()),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt1TickTok",
+                0,
+                Rep::new(
+                    r#"
+-500 -100 m 0
+ -472 -100 -450 -122 -450 -150 c 2
+ -450 -250 l 2
+ -450 -278 -472 -300 -500 -300 c 0
+ -528 -300 -550 -278 -550 -250 c 2
+ -550 -150 l 2
+ -550 -122 -528 -100 -500 -100 c 0"#,
+                    vec![],
+                ),
+            ),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt2TickTok",
+                0,
+                Rep::new(
+                    r#"
+-400 -100 m 0
+ -372 -100 -350 -122 -350 -150 c 2
+ -350 -250 l 2
+ -350 -278 -372 -300 -400 -300 c 0
+ -428 -300 -450 -278 -450 -250 c 2
+ -450 -150 l 2
+ -450 -122 -428 -100 -400 -100 c 0
+-600 -100 m 0
+ -572 -100 -550 -122 -550 -150 c 2
+ -550 -250 l 2
+ -550 -278 -572 -300 -600 -300 c 0
+ -628 -300 -650 -278 -650 -250 c 2
+ -650 -150 l 2
+ -650 -122 -628 -100 -600 -100 c 0"#,
+                    vec![],
+                ),
+            ),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt3TickTok",
+                0,
+                Rep::new(
+                    r#"
+-300 -100 m 0
+ -272 -100 -250 -122 -250 -150 c 2
+ -250 -250 l 2
+ -250 -278 -272 -300 -300 -300 c 0
+ -328 -300 -350 -278 -350 -250 c 2
+ -350 -150 l 2
+ -350 -122 -328 -100 -300 -100 c 0
+-500 -100 m 0
+ -472 -100 -450 -122 -450 -150 c 2
+ -450 -250 l 2
+ -450 -278 -472 -300 -500 -300 c 0
+ -528 -300 -550 -278 -550 -250 c 2
+ -550 -150 l 2
+ -550 -122 -528 -100 -500 -100 c 0
+-700 -100 m 0
+ -672 -100 -650 -122 -650 -150 c 2
+ -650 -250 l 2
+ -650 -278 -672 -300 -700 -300 c 0
+ -728 -300 -750 -278 -750 -250 c 2
+ -750 -150 l 2
+ -750 -122 -728 -100 -700 -100 c 0"#,
+                    vec![],
+                ),
+            ),
+            GlyphEnc::new_from_parts(
+                EncPos::None,
+                "combCartExt4TickTok",
+                0,
+                Rep::new(
+                    r#"
+-400 -100 m 0
+ -372 -100 -350 -122 -350 -150 c 2
+ -350 -250 l 2
+ -350 -278 -372 -300 -400 -300 c 0
+ -428 -300 -450 -278 -450 -250 c 2
+ -450 -150 l 2
+ -450 -122 -428 -100 -400 -100 c 0
+-200 -100 m 0
+ -172 -100 -150 -122 -150 -150 c 2
+ -150 -250 l 2
+ -150 -278 -172 -300 -200 -300 c 0
+ -228 -300 -250 -278 -250 -250 c 2
+ -250 -150 l 2
+ -250 -122 -228 -100 -200 -100 c 0
+-600 -100 m 0
+ -572 -100 -550 -122 -550 -150 c 2
+ -550 -250 l 2
+ -550 -278 -572 -300 -600 -300 c 0
+ -628 -300 -650 -278 -650 -250 c 2
+ -650 -150 l 2
+ -650 -122 -628 -100 -600 -100 c 0
+-800 -100 m 0
+ -772 -100 -750 -122 -750 -150 c 2
+ -750 -250 l 2
+ -750 -278 -772 -300 -800 -300 c 0
+ -828 -300 -850 -278 -850 -250 c 2
+ -850 -150 l 2
+ -850 -122 -828 -100 -800 -100 c 0"#,
+                    vec![],
+                ),
+            ),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE00), "VAR01", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE01), "VAR02", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE02), "VAR03", 0, Rep::default()),
@@ -31,14 +145,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE06), "VAR07", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE07), "VAR08", 0, Rep::default()),
             GlyphEnc::new_from_parts(EncPos::Pos(0xFE08), "VAR09", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2190), "arrowW", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2191), "arrowN", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2192), "arrowE", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2193), "arrowS", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2196), "arrowNW", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2197), "arrowNE", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2198), "arrowSE", 0, Rep::default()),
-            GlyphEnc::new_from_parts(EncPos::Pos(0x2199), "arrowSW", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::Pos(0xE01EF), "VAR256", 0, Rep::default()),
             GlyphEnc::new_from_parts(
                 EncPos::None,
                 "combCartExtHalfTok",
@@ -78,113 +185,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
                     vec![],
                 ),
             ),
-            GlyphEnc::new_from_parts(EncPos::None, "combCartExtNoneTok", 0, Rep::default()),
-            GlyphEnc::new_from_parts(
-                EncPos::None,
-                "combCartExt1TickTok",
-                0,
-                Rep::new(
-                    r#"
--500 -100 m 0
- -472 -100 -450 -122 -450 -150 c 2
- -450 -250 l 2
- -450 -278 -472 -300 -500 -300 c 0
- -528 -300 -550 -278 -550 -250 c 2
- -550 -150 l 2
- -550 -122 -528 -100 -500 -100 c 0"#,
-                    cart_lines_ref.clone()
-                ),
-            ),
-            GlyphEnc::new_from_parts(
-                EncPos::None,
-                "combCartExt2TickTok",
-                0,
-                Rep::new(
-                    r#"
--400 -100 m 0
- -372 -100 -350 -122 -350 -150 c 2
- -350 -250 l 2
- -350 -278 -372 -300 -400 -300 c 0
- -428 -300 -450 -278 -450 -250 c 2
- -450 -150 l 2
- -450 -122 -428 -100 -400 -100 c 0
--600 -100 m 0
- -572 -100 -550 -122 -550 -150 c 2
- -550 -250 l 2
- -550 -278 -572 -300 -600 -300 c 0
- -628 -300 -650 -278 -650 -250 c 2
- -650 -150 l 2
- -650 -122 -628 -100 -600 -100 c 0"#,
-                    cart_lines_ref.clone()
-                ),
-            ),
-            GlyphEnc::new_from_parts(
-                EncPos::None,
-                "combCartExt3TickTok",
-                0,
-                Rep::new(
-                    r#"
--300 -100 m 0
- -272 -100 -250 -122 -250 -150 c 2
- -250 -250 l 2
- -250 -278 -272 -300 -300 -300 c 0
- -328 -300 -350 -278 -350 -250 c 2
- -350 -150 l 2
- -350 -122 -328 -100 -300 -100 c 0
--500 -100 m 0
- -472 -100 -450 -122 -450 -150 c 2
- -450 -250 l 2
- -450 -278 -472 -300 -500 -300 c 0
- -528 -300 -550 -278 -550 -250 c 2
- -550 -150 l 2
- -550 -122 -528 -100 -500 -100 c 0
--700 -100 m 0
- -672 -100 -650 -122 -650 -150 c 2
- -650 -250 l 2
- -650 -278 -672 -300 -700 -300 c 0
- -728 -300 -750 -278 -750 -250 c 2
- -750 -150 l 2
- -750 -122 -728 -100 -700 -100 c 0"#,
-                    cart_lines_ref.clone()
-                ),
-            ),
-            GlyphEnc::new_from_parts(
-                EncPos::None,
-                "combCartExt4TickTok",
-                0,
-                Rep::new(
-                    r#"
--400 -100 m 0
- -372 -100 -350 -122 -350 -150 c 2
- -350 -250 l 2
- -350 -278 -372 -300 -400 -300 c 0
- -428 -300 -450 -278 -450 -250 c 2
- -450 -150 l 2
- -450 -122 -428 -100 -400 -100 c 0
--200 -100 m 0
- -172 -100 -150 -122 -150 -150 c 2
- -150 -250 l 2
- -150 -278 -172 -300 -200 -300 c 0
- -228 -300 -250 -278 -250 -250 c 2
- -250 -150 l 2
- -250 -122 -228 -100 -200 -100 c 0
--600 -100 m 0
- -572 -100 -550 -122 -550 -150 c 2
- -550 -250 l 2
- -550 -278 -572 -300 -600 -300 c 0
- -628 -300 -650 -278 -650 -250 c 2
- -650 -150 l 2
- -650 -122 -628 -100 -600 -100 c 0
--800 -100 m 0
- -772 -100 -750 -122 -750 -150 c 2
- -750 -250 l 2
- -750 -278 -772 -300 -800 -300 c 0
- -828 -300 -850 -278 -850 -250 c 2
- -850 -150 l 2
- -850 -122 -828 -100 -800 -100 c 0"#,
-                    cart_lines_ref.clone()
-                ),
-            ),
+
             GlyphEnc::new_from_parts(
                 EncPos::None,
                 "combCartExt5TickTok",
@@ -198,7 +199,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -528 900 -550 922 -550 950 c 6
  -550 1050 l 6
  -550 1078 -528 1100 -500 1100 c 4"#,
-                    cart_lines_ref.clone()
+                    vec![],
                 ),
             ),
             GlyphEnc::new_from_parts(
@@ -221,7 +222,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -628 900 -650 922 -650 950 c 6
  -650 1050 l 6
  -650 1078 -628 1100 -600 1100 c 4"#,
-                    cart_lines_ref.clone()
+                    vec![],
                 ),
             ),
             GlyphEnc::new_from_parts(
@@ -251,7 +252,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -728 900 -750 922 -750 950 c 6
  -750 1050 l 6
  -750 1078 -728 1100 -700 1100 c 4"#,
-                    cart_lines_ref.clone()
+                    vec![],
                 ),
             ),
             GlyphEnc::new_from_parts(
@@ -288,24 +289,16 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
  -828 900 -850 922 -850 950 c 6
  -850 1050 l 6
  -850 1078 -828 1100 -800 1100 c 4"#,
-                    cart_lines_ref
+                    vec![],
                 ),
             ),
-            GlyphEnc::new_from_parts(EncPos::Pos(0xE01EF), "VAR256", 0, Rep::default()),
+            GlyphEnc::new_from_parts(EncPos::None, "combCartExtNoneTok", 0, Rep::default()),
         ],
         LookupsMode::WordLigManual(vec![
             String::new(),
+            String::new(),
             "bar".to_string(),
             "ampersand".to_string(),
-            String::new(),
-            String::new(),
-            String::new(),
-            String::new(),
-            String::new(),
-            String::new(),
-            String::new(),
-            String::new(),
-            String::new(),
             "arrow".to_string(),
             "arrow".to_string(),
             "arrow".to_string(),
@@ -314,13 +307,22 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             "arrow".to_string(),
             "arrow".to_string(),
             "arrow".to_string(),
-            String::new(),
-            String::new(),
-            String::new(),
             "combCartExtTok comma".to_string(),
             "comma comma".to_string(),
             "comma comma comma".to_string(),
             "comma comma comma comma".to_string(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
+            String::new(),
             "combCartExtTok quotesingle".to_string(),
             "quotesingle quotesingle".to_string(),
             "quotesingle quotesingle quotesingle".to_string(),
@@ -333,7 +335,6 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         "fa6791",
     );
     ctrl_block.glyphs[0].cc_subs = Cc::None;
-    ctrl_block.glyphs[22].cc_subs = Cc::None;
 
     let mut tok_ctrl_block = GlyphBlock::new_from_constants(
         &mut ff_pos,
@@ -346,11 +347,11 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             String::new(),
             "hyphen".to_string(),
             "plus".to_string(),
+            "parenleft".to_string(),
+            "parenright".to_string(),
+            "underscore".to_string(),
             "braceleft".to_string(),
             "braceright".to_string(),
-            "underscore".to_string(),
-            "braceleft braceleft".to_string(),
-            "braceright braceright".to_string(),
             "startCartAlt".to_string(),
             "endCartAlt".to_string(),
             "t e".to_string(),
@@ -628,7 +629,46 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         Some(Anchor::new_stack(AnchorType::Mark)),
     );
 
-    let context_subs = {
+    let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
+
+    let space_calt = {
+        let names = vec![&base_cor_block, &base_ext_block, &base_alt_block]
+            .iter()
+            .enumerate()
+            .map(|(i, block)| {
+                block
+                    .glyphs
+                    .iter()
+                    .filter_map(|glyph| {
+                        if glyph.glyph.name.contains("empty") {
+                            None
+                        } else {
+                            Some(format!(
+                                "{}{}",
+                                glyph.glyph.name,
+                                if i != 2 { "Tok" } else { "" }
+                            ))
+                        }
+                    })
+                    .join(" ")
+            })
+            .join(" ");
+
+        let prenames = (1..9)
+            .map(|x| format!("combCartExt{x}TickTok"))
+            .join(" ");
+        let prenames = format!("{prenames} endCartTok endLongGlyphTok endRevLongGlyphTok endCartAltTok teTok toTok middleDotTok colonTok middleDot2Tok middleDot3Tok");
+
+        let sp = put_in_class("space".to_string());
+        let tok = put_in_class(format!("{prenames} {names}"));
+
+        let put_in_sub = |c: &str| format!("  {c}{sp}\n  {c}{tok}\n");
+        let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
+
+        format!("ContextSub2: class \"'calt' REMOVE SPACE\" 3 3 3 1\n{subs}")
+    };
+
+    let zwj_calt = {
         let scale_names = vec![&outer_cor_block, &outer_ext_block, &outer_alt_block]
             .iter()
             .enumerate()
@@ -694,14 +734,12 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
             })
             .join(" ");
 
-        let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
 
         let zwj = put_in_class("ZWJ".to_string());
         let scale = put_in_class(scale_names);
         let stack = put_in_class(stack_names);
 
         let put_in_sub = |c: &str| format!("  {c}{zwj}\n  {c}{scale}\n  {c}{stack}\n");
-
         let subs = format!("{}{}{}", put_in_sub(""), put_in_sub("B"), put_in_sub("F"));
 
         format!("ContextSub2: class \"'calt' CHANGE ZWJ\" 4 4 4 2\n{subs}")
@@ -716,7 +754,7 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
         upper_cor_block, upper_ext_block, upper_alt_block,
     ];
 
-    let chain_subs = {
+    let chain_calt = {
         let put_in_class = |orig: String| format!("Class: {} {}", orig.len(), orig);
 
         let base = {
@@ -811,10 +849,9 @@ fn gen_nasin_nanpa(variation: NasinNanpaVariation) -> std::io::Result<()> {
     writeln!( &mut file,
 r#"{HEADER}Version: {VERSION}
 {DETAILS1}ModificationTime: {time}{DETAILS2}{LOOKUPS}DEI: 91125
-{context_subs}{AFTER_CONTEXT_SUBS}{chain_subs}{AFTER_CHAIN_SUBS}{VERSION}{OTHER}BeginChars: {ff_pos} {ff_pos}
+{space_calt}{AFTER_SPACE_CALT}{zwj_calt}{AFTER_ZWJ_CALT}{chain_calt}{AFTER_CHAIN_CALT}{VERSION}{OTHER}BeginChars: {ff_pos} {ff_pos}
 {glyphs_string}EndChars
-EndSplineFont
-"#
+EndSplineFont"#
     )
 }
 

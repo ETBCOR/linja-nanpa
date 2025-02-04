@@ -267,16 +267,16 @@ impl Lookups {
     fn gen(&self, name: String, full_name: String, variation: NasinNanpaVariation) -> String {
 
         let latin_ligs = match &self {
-            
+
             // Used in tok_block and tok_ext_block when NasinNanpaVariation == Main
             Lookups::WordLigFromLetters => {
                 let lig = name.chars().join(" ");
                 let special = if full_name.eq("aleTok") {
-                    "Ligature2: \"'liga' WORD PLUS SPACE\" a l i space\nLigature2: \"'liga' WORD\" a l i\n"
+                    "Ligature2: \"'liga' WORD\" a l i\n"
                 } else {
                     ""
                 };
-                format!("Ligature2: \"'liga' WORD PLUS SPACE\" {lig} space\nLigature2: \"'liga' WORD\" {lig}\n{special}")
+                format!("Ligature2: \"'liga' WORD\" {lig}\n{special}")
             }
 
             // Used in ctrl_block, tok_ctrl_block, and tok_no_combo_block
@@ -316,19 +316,19 @@ impl Lookups {
                         let dir1 = convert(name.chars().nth(5).unwrap());
                         if let Some(dir2) = name.chars().nth(6) {
                             let dir2 = convert(dir2);
-                            format!("Ligature2: \"'liga' WORD PLUS SPACE\" {dir1} {dir2} space\nLigature2: \"'liga' WORD PLUS SPACE\" {dir2} {dir1} space\nLigature2: \"'liga' WORD\" {dir1} {dir2}\nLigature2: \"'liga' WORD\" {dir2} {dir1}\n")
+                            format!("Ligature2: \"'liga' WORD\" {dir1} {dir2}\nLigature2: \"'liga' WORD\" {dir2} {dir1}\n")
                         } else {
-                            format!("Ligature2: \"'liga' WORD PLUS SPACE\" {dir1} space\nLigature2: \"'liga' WORD\" {dir1}\n")
+                            format!("Ligature2: \"'liga' WORD\" {dir1}\n")
                         }
                     } else if word.eq("bar") {
-                        format!("Ligature2: \"'liga' WORD PLUS SPACE\" bar space\nLigature2: \"'liga' WORD\" bar\n")
+                        format!("Ligature2: \"'liga' WORD\" bar\n")
                     } else if word.contains("CartAlt") {
                             format!(
-                                "Ligature2: \"'liga' VAR PLUS SPACE\" {which}Tok VAR01 space\nLigature2: \"'liga' VAR PLUS SPACE\" {which}Tok one space\nLigature2: \"'liga' VAR\" {which}Tok VAR01\nLigature2: \"'liga' VAR\" {which}Tok one\n",
+                                "Ligature2: \"'liga' VAR\" {which}Tok VAR01\nLigature2: \"'liga' VAR\" {which}Tok one\n",
                                 which = if word.contains("start") { "startCart" } else { "endCart" }
                             )
                     } else {
-                        format!("Ligature2: \"'liga' WORD PLUS SPACE\" {word} space\nLigature2: \"'liga' WORD\" {word}\n")
+                        format!("Ligature2: \"'liga' WORD\" {word}\n")
                     }
                 } else {
                     String::new()
@@ -362,9 +362,7 @@ impl Lookups {
                 } else if full_name.eq("aTok_VAR04") {
                     "Ligature2: \"'liga' VAR\" semeTok ZWJ aTok\nLigature2: \"'liga' VAR\" aTok ZWJ semeTok\n"
                 } else if full_name.eq("aTok_VAR05") && variation == NasinNanpaVariation::Main {
-r#"Ligature2: "'liga' VAR PLUS SPACE" aTok exclam question space
-Ligature2: "'liga' VAR PLUS SPACE" aTok question exclam space
-Ligature2: "'liga' VAR" aTok exclam question
+r#" Ligature2: "'liga' VAR" aTok exclam question
 Ligature2: "'liga' VAR" aTok question exclam
 "#              } else { "" };
 
@@ -376,7 +374,7 @@ Ligature2: "'liga' VAR" aTok question exclam
 
                 let num_lig = if variation == NasinNanpaVariation::Main && full_name.contains("VAR0") {
                     format!(
-                        "Ligature2: \"'liga' VAR PLUS SPACE\" {glyph} {sel} space\nLigature2: \"'liga' VAR\" {glyph} {sel}\n",
+                        "Ligature2: \"'liga' VAR\" {glyph} {sel}\n",
                         sel = match sel {
                             "VAR01" | "arrowW" => "one",
                             "VAR02" | "arrowN" => "two",
@@ -408,13 +406,13 @@ Ligature2: "'liga' VAR" aTok question exclam
                     let sel = sel.chars().last().unwrap().to_string();
                     if full_name.starts_with("jakiTok") {
                         if variation == NasinNanpaVariation::Main {
-                            (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} VAR0{sel} space\nLigature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} {sel_word} space\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR0{sel}\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} {sel_word}\n")).collect::<String>()
+                            (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR0{sel}\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} {sel_word}\n")).collect::<String>()
                         } else {
                             (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR0{sel}\n")).collect::<String>()
                         }
                     } else if full_name.starts_with("koTok") {
                         if variation == NasinNanpaVariation::Main {
-                            (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} VAR0{sel} space\nLigature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} {sel_word} space\nLigature2: \"'liga' VAR\" koTok_VAR0{n} VAR0{sel}\nLigature2: \"'liga' VAR\" koTok_VAR0{n} {sel_word}\n")).collect::<String>()
+                            (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" koTok_VAR0{n} VAR0{sel}\nLigature2: \"'liga' VAR\" koTok_VAR0{n} {sel_word}\n")).collect::<String>()
                         } else {
                             (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" koTok_VAR0{n} VAR0{sel}\n")).collect::<String>()
                         }
@@ -425,12 +423,7 @@ Ligature2: "'liga' VAR" aTok question exclam
                     String::new()
                 };
 
-                let if_main = if variation == NasinNanpaVariation::Main {
-                    format!("Ligature2: \"'liga' VAR PLUS SPACE\" {glyph} {sel} space\n")
-                } else {
-                    String::new()
-                };
-                format!("{a}{if_main}Ligature2: \"'liga' VAR\" {glyph} {sel}\n{arrow_lig}{num_lig}{rerand}")
+                format!("{a}Ligature2: \"'liga' VAR\" {glyph} {sel}\n{arrow_lig}{num_lig}{rerand}")
             }
 
             // Used in tok_outer_block, tok_ext_outer_block, tok_alt_outer_block,
@@ -453,7 +446,7 @@ Ligature2: "'liga' VAR" aTok question exclam
             format!(
                 "{rerand}AlternateSubs2: \"'rand' RAND VARIATIONS\" jakiTok_VAR01 jakiTok_VAR02 jakiTok_VAR03 jakiTok_VAR04 jakiTok_VAR05 jakiTok_VAR06 jakiTok_VAR07 jakiTok_VAR08\n",
                 rerand = if variation == NasinNanpaVariation::Main {
-                    (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} VAR09 space\nLigature2: \"'liga' VAR PLUS SPACE\" jakiTok_VAR0{n} nine space\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR09\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} nine\n")).collect::<String>()
+                    (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR09\nLigature2: \"'liga' VAR\" jakiTok_VAR0{n} nine\n")).collect::<String>()
                 } else { 
                     (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" jakiTok_VAR0{n} VAR09\n")).collect::<String>()
                 }
@@ -462,7 +455,7 @@ Ligature2: "'liga' VAR" aTok question exclam
             format!(
                 "{rerand}AlternateSubs2: \"'rand' RAND VARIATIONS\" koTok_VAR01 koTok_VAR02 koTok_VAR03 koTok_VAR04 koTok_VAR05 koTok_VAR06 koTok_VAR07 koTok_VAR08\n",
                 rerand = if variation == NasinNanpaVariation::Main { 
-                    (1..9).map(|n| format!("Ligature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} VAR09 space\nLigature2: \"'liga' VAR PLUS SPACE\" koTok_VAR0{n} nine space\nLigature2: \"'liga' VAR\" koTok_VAR0{n} VAR09\nLigature2: \"'liga' VAR\" koTok_VAR0{n} nine\n")).collect::<String>()
+                    (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" koTok_VAR0{n} VAR09\nLigature2: \"'liga' VAR\" koTok_VAR0{n} nine\n")).collect::<String>()
                 } else {
                     (1..9).map(|n| format!("Ligature2: \"'liga' VAR\" koTok_VAR0{n} VAR09\n")).collect::<String>()
                 }
@@ -560,7 +553,13 @@ impl GlyphFull {
             } else if full_name.eq("quotesingle") {
                 "MultipleSubs2: \"'cc01' CART\" combCartExt5TickTok\nMultipleSubs2: \"'cc02' CONT\" combLongGlyphExtHalfTok\n".to_string()
             } else {
-                format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtHalfTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtHalfTok\n")
+                let ss00 = if full_name.eq("space") {
+                    "Substitution2: \"'ss00' SP TO ZWSP\" ZWSP\n"
+                } else {
+                    ""
+                };
+
+                format!("{ss00}MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtHalfTok\nMultipleSubs2: \"'cc02' CONT\" {full_name} combLongGlyphExtHalfTok\n")
             },
             Cc::Participant => if full_name.contains("Tick") {
                 format!("MultipleSubs2: \"'cc01' CART\" {full_name} combCartExtNoneTok\n")
@@ -569,8 +568,9 @@ impl GlyphFull {
             },
             Cc::None => String::new(),
         };
-        let flags = if full_name.eq("ZWJ")
+        let flags = if full_name.eq("ZWSP")
             || full_name.eq("ZWNJ")
+            || full_name.eq("ZWJ")
             || full_name.starts_with("VAR")
             || full_name.starts_with("arrow")
             || full_name.eq("joinStackTok")

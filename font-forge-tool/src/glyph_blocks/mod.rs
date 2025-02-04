@@ -74,9 +74,11 @@ OS2UnicodeRanges: 0000000f.00000000.00000000.00000000
 "#;
 
 pub const LOOKUPS: &str = r#"Lookup: 4 0 0 "'liga' SPACE" { "'liga' SPACE"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 4 0 0 "'liga' WORDS" { "'liga' WORD PLUS SPACE"  "'liga' WORD"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "'liga' WORDS" { "'liga' WORD"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 3 0 0 "'rand' RAND VARIATIONS" { "'rand' RAND VARIATIONS"  } ['rand' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
-Lookup: 4 0 0 "'liga' VARIATIONS" { "'liga' VAR PLUS SPACE"  "'liga' VAR"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 4 0 0 "'liga' VARIATIONS" { "'liga' VAR"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 5 0 0 "'calt' REMOVE SPACE" { "'calt' REMOVE SPACE"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
+Lookup: 1 0 0 "'ss00' SP TO ZWSP" { "'ss00' SP TO ZWSP"  } ['ss00' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 4 0 0 "'liga' START CONTAINER" { "'liga' START CONTAINER"  } ['liga' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 5 0 0 "'calt' CHANGE ZWJ" { "'calt' CHANGE ZWJ"  } ['calt' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
 Lookup: 1 0 0 "'ss01' ZWJ TO SCALE" { "'ss01' ZWJ TO SCALE"  } ['ss01' ('DFLT' <'dflt' 'latn' > 'latn' <'dflt' > ) ]
@@ -92,7 +94,19 @@ Lookup: 260 0 0 "'mark' POSITION COMBO" { "'mark' STACK"  "'mark' SCALE"  } ['ma
 MarkAttachClasses: 1
 "#;
 
-pub const AFTER_CONTEXT_SUBS: &str = r#" 2 0 0
+pub const AFTER_SPACE_CALT: &str = r#" 2 0 0
+  ClsList: 2 1
+  BClsList:
+  FClsList:
+ 1
+  SeqLookup: 1 "'ss00' SP TO ZWSP"
+  ClassNames: "All_Others" "sp" "tok"
+  BClassNames: "All_Others" "sp" "tok"
+  FClassNames: "All_Others" "sp" "tok"
+EndFPST
+"#;
+
+pub const AFTER_ZWJ_CALT: &str = r#" 2 0 0
   ClsList: 2 1
   BClsList:
   FClsList:
@@ -110,7 +124,7 @@ pub const AFTER_CONTEXT_SUBS: &str = r#" 2 0 0
 EndFPST
 "#;
 
-pub const AFTER_CHAIN_SUBS: &str = r#" 1 1 0
+pub const AFTER_CHAIN_CALT: &str = r#" 1 1 0
   ClsList: 1
   BClsList: 2
   FClsList:
